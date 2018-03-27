@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="main">
+<h1>Transaction History</h1>
+<button type="button" id="deposit">Deposits</button>
+<button type="button" id="withdrawal">Withdrawals</button>
+</div>
+
+<div class="content" id="tables"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#deposit").click(function(){
+		$("#tables").load("deposits.html #deposit")
+	});
+
+	$("#withdrawal").click(function(){
+		$("#tables").load("withdrawals.html #withdraw")
+	})
+});
+</script>
+
+</body>
+</html>
